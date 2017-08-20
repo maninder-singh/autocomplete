@@ -1,15 +1,17 @@
 {
-  "name": "ui-exercise",
+  "name": "autocomplete",
   "version": "1.0.0",
-  "description": "A simple autocomplete functionality with ui validation.",
+  "description": "A simple autocomplete and modal popup functionality with ui validation using angularjs.",
   "main": "index.js",
   "scripts": {
     "start": "lite-server"
   },
   "keywords": [
-    "Autocomplete",
-    "Modal Dialog",
-    "UI Validation"
+    "autocomplete",
+    "modal-dialog",
+    "ui-validation",
+    "angularjs",
+    "directive"
   ],
   "author": "Maninder Singh",
   "license": "ISC",

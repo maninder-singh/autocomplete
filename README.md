@@ -1,6 +1,6 @@
 # Autocomplete 
 
-A simple autocomplete dropdown with ui form validation using [angularjs](https://angularjs.org/).
+A simple autocomplete dropdown and modal popup with ui form validation using [angularjs](https://angularjs.org/).
 
 ### Tools Required
 

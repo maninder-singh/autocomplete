@@ -1,0 +1,24 @@
+{
+  "name": "ui-exercise",
+  "version": "1.0.0",
+  "description": "A simple autocomplete functionality with ui validation.",
+  "main": "index.js",
+  "scripts": {
+    "start": "lite-server"
+  },
+  "keywords": [
+    "Autocomplete",
+    "Modal Dialog",
+    "UI Validation"
+  ],
+  "author": "Maninder Singh",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-ui-router": "^1.0.3",
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {
+    "lite-server": "^2.3.0"
+  }
+}

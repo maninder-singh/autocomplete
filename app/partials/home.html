@@ -1,0 +1,61 @@
+<div>
+    <button class="custom-button" ng-click="openModal()">Open</button>
+</div>
+
+<modal id="custom-modal-1">
+    <div class="modal">
+        <div class="modal-content confirmation-box" ng-show="showConfirmationBox">
+            <div class="modal-body">
+                <div class="modal-header center">
+                    <label class="form-label">
+                        <h2 class="heading">Are you sure..</h2>
+                    </label>
+                </div>
+                <div class="modal-footer center">
+                    <button class="custom-button button-blue" ng-click="yes()">Yes</button>                
+                    <button class="custom-button right-offset" ng-click="no()">No</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-content" ng-hide="showConfirmationBox">
+            <div class="modal-body">
+                <span class="close pull-right right-offset" ng-click="confirmationPrompt()">&times;</span>
+                <label class="form-label">
+                    <h2 class="heading">Select an Employee</h2>
+                </label>
+                <div class="group" ng-hide="isFormValid">
+                    <label class="form-label" ng-class="{'invalid' : !isFormValid}">
+                        {{errorMsg}}
+                    </label>
+                </div>
+                <form name="form" id="form">
+                    <div class="group">
+                        <label class="form-label">
+                            <input type="checkbox" ng-modal="sendMailChecked" />
+                            Send welcome email to employee
+                        </label>
+                    </div>               
+                    <div class="group">
+                        <label class="form-label" for="teamsId">Select a Team in the Organization</label>
+                        <div class="form-align">
+                            <autocomplete id="teamsId" placeholder="Search teams" 
+                            debounce="100" selected="selectedTeam" records="teams" min-length="1"/>
+                        </div>
+                    </div>
+                    <div class="group">
+                        <label class="form-label" for="employeesId">Select an Employee</label>
+                        <div class="form-align">
+                            <autocomplete id="employeeId" placeholder="Search Employee" 
+                                debounce="100" selected="selectedEmployee" records="teamWiseEmployees" min-length="1"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+              <div class="modal-footer"> 
+                <button class="custom-button button-blue pull-right" ng-click="save()">Ok</button>                
+                <button class="custom-button pull-right right-offset" ng-click="confirmationPrompt()">Cancel</button>
+            </div> 
+        </div>
+    </div>
+    <div class="modal-background"></div>
+</modal>

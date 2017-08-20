@@ -1,0 +1,14 @@
+<div class="ac">
+    <input id="{{::property.id}}" 
+           type="text" 
+           placeholder="{{::property.placeholder}}" 
+           class="form-control form-control-small" 
+           ng-model="filterStr" 
+           ng-model-options='{ debounce: debounce }'
+           ng-change='filterRecords()'/>
+    <div id="{{::property.optionId}}" class="ac-dropdown" ng-if="isOptionsAvaiable">
+        <div class="ac-row" ng-repeat="result in results" ng-click="selectedRecord(result)">
+            <div class="ac-title">{{ result }}</div>
+        </div>
+    </div>
+</div>
